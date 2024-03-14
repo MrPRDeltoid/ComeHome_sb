@@ -1,7 +1,7 @@
 from .base_page import BasePage
 
 
-class SignupDialog(BasePage):
+class Dialog(BasePage):
     """Selectors in the login dialog"""
     header = '[data-hc-name="modal-header"]'
     link = 'button[class*="SignUpOrLoginLink__"]'
@@ -37,5 +37,6 @@ class HomePage(BasePage):
     photoSection = 'div[class="HomeSubpageSearch__PhotoSection"]'
     footerSection = '[data-hc-name="footer-section"]'
 
-    # Login dialog
-    loginDialog = 'div[class*="AuthModal__Modal"]'
+    class AccountsDialog(Dialog):
+        # Accounts dialog, includes Sign up and Log in
+        accountsDialog = 'div[class*="AuthModal__Modal"]'
