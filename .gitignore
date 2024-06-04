@@ -1,0 +1,5 @@
+*.pyc
+/assets
+/recordings
+.idea/
+/downloaded_files
