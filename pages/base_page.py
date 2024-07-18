@@ -45,9 +45,10 @@ class Footer(BaseCase):
 
 class BasePage(BaseCase):
     """Selectors and methods common across the app"""
+    BASE_URL = "https://www.comehome.com/"
 
-    class MainHeader(Header):
-        mainHeader = '[data-hc-name="top-section"]'
+    class MainMenu(Header):
+        mainMenu = '[data-hc-name="top-section"]'
 
     class AccountsDialog(Dialog):
         accountsDialog = 'div[class*="AuthModal__Modal"]'
@@ -57,7 +58,7 @@ class BasePage(BaseCase):
 
     # Methods
     def launchAccountsDialog(self):
-        self.click(self.MainHeader.joinLoginButton)
+        self.click(self.MainMenu.joinLoginButton)
         self.wait_for_element(self.AccountsDialog.accountsDialog)
 
     def closeAccountsDialog(self):

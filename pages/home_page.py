@@ -3,7 +3,7 @@ from .base_page import BasePage
 
 class HomePage(BasePage):
     """Selectors and methods for home page"""
-    URL = "https://www.comehome.com/"
+    URL = f"{BasePage.BASE_URL}"
 
     # Home Page main sections
     topSection = '[class$="__TopSection"]'

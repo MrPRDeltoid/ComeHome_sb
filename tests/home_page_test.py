@@ -8,7 +8,7 @@ class HomePageTest(HomePage, BaseTestCase):
     """Basic tests for main home page elements"""
     def test_main_sections_exist(self):
         """Test that all main sections are present"""
-        self.assert_elements(HomePage.MainHeader.mainHeader,
+        self.assert_elements(HomePage.MainMenu.mainMenu,
                              HomePage.topSection,
                              HomePage.photoSection,
                              HomePage.trackOrBuyHomeSection,

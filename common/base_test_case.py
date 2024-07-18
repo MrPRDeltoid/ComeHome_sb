@@ -1,12 +1,12 @@
 from seleniumbase import BaseCase
-from ..pages.home_page import HomePage
+from ..pages.base_page import BasePage
 
 
 class BaseTestCase(BaseCase):
     """Common methods used across tests"""
     def setUp(self):
         super().setUp()
-        self.open(HomePage.URL)
+        self.open(BasePage.BASE_URL)
         #options = self.driver.ChromeOptions()
         self.maximize_window()
 

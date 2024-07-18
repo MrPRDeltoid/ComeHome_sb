@@ -11,7 +11,13 @@ class PropertyPage(BasePage):
 
 class PublicView(PropertyPage):
     """Elements and methods specific to Public View"""
-    URL = "https://www.comehome.com/property-details/{slug}"
+    def get_url(self, slug):
+        URL = f"{BasePage.BASE_URL}property-details/{slug}"
+        return URL
+
+    def get_title(self, address):
+        TITLE = f"{address} | Property Details | ComeHome"
+        return TITLE
 
     photoSection = '[data-hc-name="carousel-section"]'
     introSection = '[data-hc-name="property-intro-section"]'
@@ -27,7 +33,13 @@ class PublicView(PropertyPage):
 
 class OwnerView(PropertyPage):
     """Elements and methods specific to Owner View"""
-    URL = "https://www.comehome.com/homeowner/{slug}"
+    def get_url(self, slug):
+        URL = f"{BasePage.BASE_URL}homeowner/{slug}"
+        return URL
+
+    def get_title(self, address):
+        TITLE = f"{address} | My Home | ComeHome"
+        return TITLE
 
     avmSection = '[data-hc-name="avm-section"]'
     avmSectionAddress = '[data-hc-name="avm-address"] > h1'
