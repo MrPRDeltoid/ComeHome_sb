@@ -60,7 +60,7 @@ class MyHomeSearchTest(HomePage, BaseTestCase):
         """Check correct elements and text are shown"""
         # Switch to My home value view
         self.click(HomePage.trackHomeButton)
-        self.assert_exact_text("See your home's\nfull potential", HomePage.pageHeaderText)
+        self.assert_exact_text("See your home's \nfull potential", HomePage.pageHeaderText)
         self.assert_exact_text("Claim your home and unlock features to see your home's value, equity, and more.",
                                HomePage.pageSubheaderText)
         self.assert_exact_text("My home value", HomePage.trackHomeButton)
@@ -89,6 +89,7 @@ class TrackBuyHomeTest(HomePage, BaseTestCase):
     """Tests for track or buy home section"""
     def test_elements_and_text(self):
         """Check correct elements and text are displayed"""
+        self.scroll_into_view(HomePage.trackOrBuyHomeSection)
         self.assert_exact_text("Buying a home", HomePage.buyHomeTitle)
         self.assert_exact_text("Search homes for sale and filter by price, neighborhood, school ratings, and more. Find the perfect home that fits your needs.",
                                HomePage.buyHomeDescription)
@@ -107,6 +108,7 @@ class FindAgentTest(HomePage, BaseTestCase):
     """Tests for find an agent section"""
     def test_elements_and_text(self):
         """Check correct elements and text are displayed"""
+        self.scroll_into_view(HomePage.findAgentSection)
         self.assert_exact_text("Need help finding an agent? We'll connect you.", HomePage.findAgentTitle)
         self.assert_exact_text("We can help pair you with the right agent for your real estate needs. Let our team help make locating the best agent easy and smooth.",
                                HomePage.findAgentDescription)

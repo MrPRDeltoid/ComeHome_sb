@@ -22,6 +22,7 @@ class HomePage(BasePage):
     photoColumn = 'class$="__PhotoColumn"]'
     photo = '[class$="__PhotoColumnPhoto"]'
     # Track or buy home section
+    trackOrBuyHomeSection = '.HomeSubpageTrackOrBuyHome__HomeSubpageTrackOrBuyHome'
     buyHomeTitle = '[data-hc-name="buy-home-modal-header"]'
     buyHomeDescription = '[data-hc-name="buy-home-modal-description"]'
     searchHomesButton = '[data-hc-name="buy-home-modal-button"]'
@@ -29,6 +30,7 @@ class HomePage(BasePage):
     yourHomeDescription = '[data-hc-name="your-home-dash-modal-description"]'
     seeMyHomeButton = '[data-hc-name="your-home-dash-modal-button"]'
     # Find agent section
+    findAgentSection = '.HomeSubpageYourTeamAgent__HomeSubpageYourTeamAgent'
     findAgentTitle = '.HomeSubpageYourTeamAgent__CardHeader'
     findAgentDescription = '.HomeSubpageYourTeamAgent__CardDescription'
     findAgentButton = '[data-hc-name="find-an-agent-cta"]'
